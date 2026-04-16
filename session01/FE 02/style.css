@@ -1,0 +1,373 @@
+/* ============================================
+   RESET & GLOBAL
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #0F1629;
+  color: #F0F4F8;
+  line-height: 1.6;
+}
+
+/* ============================================
+   CSS VARIABLES (Warna & Ukuran Global)
+   ============================================ */
+:root {
+  --warna-utama:   #E94560;
+  --bg-gelap:      #1A1A2E;
+  --bg-biru:       #0F3460;
+  --bg-kartu:      #1E2A3A;
+  --teks-putih:    #F0F4F8;
+  --teks-abu:      #94A3B8;
+  --radius:        8px;
+  --radius-besar:  12px;
+  --shadow:        0 4px 20px rgba(0, 0, 0, 0.3);
+  --transisi:      all 0.3s ease;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+  display: flex;                      /* aktifkan flexbox */
+  justify-content: space-between;     /* logo kiri, menu kanan */
+  align-items: center;                /* sejajar tengah vertikal */
+  padding: 20px 60px;
+  background-color: var(--bg-gelap);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--teks-putih);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;          /* menu berjajar horizontal */
+  list-style: none;
+  gap: 32px;              /* jarak antar menu */
+}
+
+.nav-links a {
+  color: var(--teks-abu);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: var(--transisi);
+}
+
+.nav-links a:hover {
+  color: var(--warna-utama);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  min-height: 90vh;
+  background: var(--bg-biru);
+  display: flex;                /* aktifkan flexbox */
+  align-items: center;          /* konten di tengah vertikal */
+  padding: 60px;
+}
+
+.hero-konten {
+  max-width: 680px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(233, 69, 96, 0.15);
+  color: var(--warna-utama);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid rgba(233, 69, 96, 0.3);
+}
+
+.hero h1 {
+  font-size: 52px;
+  color: var(--teks-putih);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: var(--warna-utama);
+}
+
+.deskripsi {
+  font-size: 18px;
+  color: var(--teks-abu);
+  margin-bottom: 32px;
+  max-width: 560px;
+}
+
+.tombol-grup {
+  display: flex;    /* tombol berjajar horizontal */
+  gap: 16px;
+  flex-wrap: wrap;  /* turun baris di layar kecil */
+}
+
+.tombol-utama {
+  background: var(--warna-utama);
+  color: white;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: var(--transisi);
+}
+
+.tombol-utama:hover {
+  background: #c73652;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+}
+
+.tombol-kedua {
+  border: 2px solid var(--warna-utama);
+  color: var(--warna-utama);
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: var(--transisi);
+}
+
+.tombol-kedua:hover {
+  background: rgba(233, 69, 96, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   SECTION FITUR
+   ============================================ */
+.fitur {
+  padding: 80px 60px;
+  background: #16213E;
+  text-align: center;
+}
+
+.judul-seksi {
+  font-size: 36px;
+  color: var(--teks-putih);
+  margin-bottom: 12px;
+}
+
+.subjudul-seksi {
+  font-size: 16px;
+  color: var(--teks-abu);
+  margin-bottom: 48px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kartu-grid {
+  display: flex;              /* kartu berjajar */
+  gap: 24px;                  /* jarak antar kartu */
+  flex-wrap: wrap;            /* turun baris kalau tidak muat */
+  justify-content: center;    /* kartu di tengah */
+}
+
+.kartu {
+  flex: 1;                    /* kartu mengisi ruang sama rata */
+  min-width: 220px;           /* lebar minimum sebelum turun baris */
+  max-width: 300px;
+  background: var(--bg-kartu);
+  border-radius: var(--radius-besar);
+  padding: 32px;
+  transition: var(--transisi);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kartu:hover {
+  transform: translateY(-8px);   /* naik ke atas saat hover */
+  box-shadow: var(--shadow);
+  border-color: rgba(233, 69, 96, 0.3);
+}
+
+.ikon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.kartu h3 {
+  color: var(--teks-putih);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.kartu p {
+  color: var(--teks-abu);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ============================================
+   SECTION TENTANG
+   ============================================ */
+.tentang {
+  padding: 80px 60px;
+  background: var(--bg-gelap);
+}
+
+.tentang-konten {
+  display: flex;          /* 2 kolom berdampingan */
+  gap: 60px;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tentang-teks {
+  flex: 3;                /* dapat 3/5 lebar */
+}
+
+.tentang-list {
+  flex: 2;                /* dapat 2/5 lebar */
+}
+
+.tentang-teks h2 {
+  font-size: 32px;
+  color: var(--teks-putih);
+  margin-bottom: 20px;
+}
+
+.tentang-teks p {
+  color: var(--teks-abu);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.tentang-list h3 {
+  font-size: 18px;
+  color: var(--warna-utama);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.tentang-list ul {
+  list-style: none;
+}
+
+.tentang-list li {
+  color: var(--teks-abu);
+  font-size: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transisi);
+}
+
+.tentang-list li:hover {
+  color: var(--teks-putih);
+  padding-left: 8px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: #0D1117;
+  color: var(--teks-abu);
+  padding: 32px 60px;
+  display: flex;                    /* teks kiri, sosmed kanan */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;                  /* turun baris di HP */
+  gap: 16px;
+}
+
+.sosmed {
+  display: flex;
+  gap: 24px;
+}
+
+.sosmed a {
+  color: var(--teks-abu);
+  text-decoration: none;
+  font-size: 14px;
+  transition: var(--transisi);
+}
+
+.sosmed a:hover {
+  color: var(--warna-utama);
+}
+
+/* ============================================
+   MEDIA QUERY — Responsif untuk HP
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* Navbar: sembunyikan menu di HP */
+  .navbar {
+    padding: 16px 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  /* Hero: perkecil font */
+  .hero {
+    padding: 40px 24px;
+    min-height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .deskripsi {
+    font-size: 15px;
+  }
+
+  /* Fitur: kartu full width */
+  .fitur {
+    padding: 60px 24px;
+  }
+
+  .kartu {
+    min-width: 100%;    /* kartu jadi full width di HP */
+    max-width: 100%;
+  }
+
+  /* Tentang: kolom jadi satu */
+  .tentang {
+    padding: 60px 24px;
+  }
+
+  .tentang-konten {
+    flex-direction: column;   /* dari horizontal jadi vertikal */
+    gap: 32px;
+  }
+
+  /* Footer: kolom jadi satu, tengah */
+  .footer {
+    padding: 24px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
