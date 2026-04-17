@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="screen">
+            <div class="screen1" id="screen1">0</div>
+            <div class="screen2" id="screen2">0</div>
+            <div class="screenResult" id="screenResult"></div>
+            <button onclick="clearAll()">clear</button>
+        </div>
+        <div class="buttons">
+            <div><button value="1" id="1" onclick="numberClick(1)">1</button></div>
+            <div><button value="2" id="2" onclick="numberClick(2)">2</button></div>
+            <div><button value="3" id="3" onclick="numberClick(3)">3</button></div>
+            <div><button value="+" id="+" onClick="operatorClick('+')">+</button></div>
+
+            <div><button value="4" id="4" onclick="numberClick(4)">4</button></div>
+            <div><button value="5" id="5" onclick="numberClick(5)">5</button></div>
+            <div><button value="6" id="6" onclick="numberClick(6)">6</button></div>
+            <div><button value="-" id="-" onClick="operatorClick('-')">-</button></div>
+
+            <div><button value="7" id="7" onclick="numberClick(7)">7</button></div>
+            <div><button value="8" id="8" onclick="numberClick(8)">8</button></div>
+            <div><button value="9" id="9" onclick="numberClick(9)">9</button></div>
+            <div><button value="*" id="*" onClick="operatorClick('*')">X</button></div>
+
+            <div><button value="0" id="0" onclick="numberClick(0)">0</button></div>
+            <div><button value="=" id="=" onclick="resultClick()">=</button></div>
+            <div><button value="C" id="mod" onclick="operatorClick('%')">%</button></div>
+            <div><button value="/" id="/" onClick="operatorClick('/')">&divide;</button></div>
+        </div>
+    </div>
+    <ul class="history" id="history"></ul>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
