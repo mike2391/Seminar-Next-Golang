@@ -45,5 +45,5 @@ function konversiSuhu() {
       inputAkhir = inputAwal;
     }
   }
-  document.getElementById("suhu2").value = Number(inputAkhir.toFixed(2));
+  document.getElementById("suhu2").value = inputAkhir;
 }
