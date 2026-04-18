@@ -12,49 +12,11 @@ body {
 
 .wrapper {
   background-color: white;
-  width: 200px;
   padding: 10px;
   border-radius: 10px;
 }
 
-.screen {
+.wrapper-suhu {
   display: flex;
   gap: 5px;
-}
-
-.screen1,
-.screen2,
-.screenResult {
-  width: 100%;
-  /* height: 50px */
-  background-color: black;
-  color: white;
-  display: block;
-  text-align: right;
-  padding: 10px 5px;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.buttons button {
-  height: 50px;
-  width: 50px;
-  font-size: 16px;
-}
-
-ul {
-  color: black;
-}
-
-.history {
-  list-style-type: none;
-  height: 200px;
-  width: 200px;
-  background-color: white;
-  overflow-y: auto;
-  padding: 5px;
-  border-radius: 10px;
 }

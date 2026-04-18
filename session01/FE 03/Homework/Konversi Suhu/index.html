@@ -10,8 +10,29 @@
 
 <body>
     <div class="wrapper">
-        <label for="suhu">Suhu</label>
-        <input name="suhu" id="suhu" type="number">
+        <div class="wrapper-suhu">
+            <label for="suhu1">Suhu</label>
+            <input name="suhu1" id="suhu1" type="number" oninput="konversiSuhu()">
+            <label for="suhu-awal">suhu awal</label>
+            <select id="suhu-awal" onchange="konversiSuhu()">
+                <option value="celcius">Celcius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+                <option value="reamur">Reamur</option>
+            </select>
+        </div>
+        <br>
+        <div class="wrapper-suhu">
+            <label for="suhu2">Suhu</label>
+            <input name="suhu2" id="suhu2" type="number" disabled>
+            <label for="konversi">konversi</label>
+            <select id="konversi" onchange="konversiSuhu()">
+                <option value="celcius">Celcius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+                <option value="reamur">Reamur</option>
+            </select>
+        </div>
     </div>
 
     <script src="script.js"></script>
